@@ -1,34 +1,29 @@
 userList = [['sunny1', 'pwd1DdeEff'], ['superS', 'pwD2Abcdefgh'], ['likeA', 'pwd3AAAAAAA'], ['qwerty', 'pwd4QWERTY']]
-
-def valid_username(username, userList):
-    for user in userList:
-        if user[0] == username:
-            return "User Name Exists", False
+def valid_username(username, nameList):
+    for user in nameList:
+        if username == user[0]:
+            return "username is exist", False
     if len(username) < 5:
-        return "Invalid", False
-    return "Valid", True
+        return "invalid", False
+    else:
+        return "valid", True
 
 def valid_password(password):
     if len(password) < 8:
-        return "Invalid", False
-
-    has_upper = False
-    has_lower = False
-    has_digit = False
-
+        return "invalid", False
+    char_upper = False
+    char_lower = False
+    char_digit = False
     for char in password:
         if char.isupper():
-            has_upper = True
+            char_upper = True
         if char.islower():
-            has_lower = True
+            char_lower = True
         if char.isdigit():
-            has_digit = True
-
-    if not (has_upper and has_lower and has_digit):
-        return "Invalid", False
-
-    return "Valid", True 
-
+            char_digit = True
+    if not (char_upper and char_lower and char_digit):
+        return "invalid", False
+    return "valid", True
 
 def add_user(userList):
     while True:
@@ -49,12 +44,8 @@ def add_user(userList):
                 break
             else:
                 print("Passwords do not match")
-
-# test
-print(userList)
-print(valid_username('likeA', userList))
-print(valid_username('user', userList))
+            
+print(valid_username("likeA", userList))
 print(valid_password('azertyuiop'))
-print(valid_password('12345AZERTYuiop'))
 add_user(userList)
 print(userList)

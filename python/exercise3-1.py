@@ -1,9 +1,11 @@
 score = int(input("Score:"))
-while True:
-    if score >= 0 and score <= 100:
-        break
-    else:
-        score = int(input("Invalid input. Please enter a score between 0 and 100.n/Score:"))
+#while True:
+#    if score >= 0 and score <= 100:
+#        break
+ #   else:
+ #       score = int(input("Invalid input. Please enter a score between 0 and 100.n/Score:"))
+while score < 0 or score > 100:
+    score = int(input("Invalid input. Please enter a score between 0 and 100.n/Score:"))
 
 if score >= 95:
     print('A')
