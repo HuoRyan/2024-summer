@@ -2,3 +2,5 @@
 - review lecture 10,
 - midterm
 - final exam.
+## 2024.7.31
+- final exam
