@@ -14,6 +14,9 @@ The project is to convert a python http webapp to https webapp, then the certifi
 - [ ] Learn how to pull an container image from registry via docker
 - [ ] Learn how to run a container via docker
 - [ ] Run the python webapp via http and access it in browser
+- [ ] Understand the browser and server data flow
+- [ ] Understand the difference between http and https
+- [ ] Understand encryption, signature and certificate, refer [document](https://github.com/huoqifeng/document/blob/master/security/encryption-signature-cert.md)
 
 ## Add https support (this is the goal of this project)
 - [ ] Generate a self-generated certificate
